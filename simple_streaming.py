@@ -6,16 +6,14 @@ tello.connect()
 
 import cv2 as cv
 tello.streamon()
+
+key = cv.waitKey()
+# tello video
 while True:
-    key = cv.waitKey()
     frame_read=tello.get_frame_read()
     cv.imshow(' ',frame_read.frame)
-# tello.takeoff()
-
-# tello.land()
-    cv.waitKey(10)
-    if key==ord('q'):
-        tello.streamoff()
+    if key == ord('q'):
+        cv.destroyAllWindows()
         break
-
+tello.streamoff()
 pass
