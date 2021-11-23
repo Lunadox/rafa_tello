@@ -18,16 +18,16 @@ while True:
         # 이륙
     elif key == 32:
         tello.move_up(50)
-        # 위로(cm)
+        # 위로(cm) 스페이스바
     elif key == 82:
         tello.move_forward(50)
-        # 앞으로(cm)
+        # 앞으로(cm) 방향키 앞
     elif key == 84:  
         tello.move_back(50)
-        # 뒤로(cm)
+        # 뒤로(cm) 방향키 뒤
     elif key == 83:
         tello.rotate_clockwise(360)
-        # 회전(degree)
+        # 회전(degree) 방향키 오른쪽
     # if key >-1:
     #     print(key)
     elif key == ord('q'):
